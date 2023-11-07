@@ -173,3 +173,11 @@ VALUES
     INNER JOIN Hero h ON p.hero_id = h.hero_id
     WHERE h.is_active = true;
     
+    --Query 6 Question
+    SELECT hero_name
+    FROM Hero
+    WHERE class_id IN (
+    SELECT class_id
+    FROM Class
+    WHERE class_name LIKE '%Archer%'
+    );
