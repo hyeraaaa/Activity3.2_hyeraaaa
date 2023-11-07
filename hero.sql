@@ -181,3 +181,12 @@ VALUES
     FROM Class
     WHERE class_name LIKE '%Archer%'
     );
+
+    --Query 7 Question
+    SELECT c.class_name, AVG(p.player_level) AS average_level
+    FROM Class c
+    LEFT JOIN Hero h ON c.class_id = h.class_id
+    LEFT JOIN Player p ON h.hero_id = p.hero_id
+    GROUP BY c.class_name
+    ORDER BY average_level DESC;
+    
