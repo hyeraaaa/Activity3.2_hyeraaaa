@@ -166,4 +166,10 @@ VALUES
     --Delete
     DELETE FROM HeroItem
     WHERE hero_id = 1
+
+    --Query 5 Question
+    SELECT p.player_name, h.hero_name
+    FROM Player p
+    INNER JOIN Hero h ON p.hero_id = h.hero_id
+    WHERE h.is_active = true;
     
