@@ -157,3 +157,13 @@ VALUES
     ALTER TABLE Item
     ADD item_price DECIMAL(10, 2);
     
+    --Query 4 Question 
+    --Update
+    UPDATE Hero
+    SET is_active = false
+    WHERE hero_id = 1;
+
+    --Delete
+    DELETE FROM HeroItem
+    WHERE hero_id = 1
+    
